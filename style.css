@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    font-family: "Fjalla One", serif;
+}
+
+header {
+  max-width: 100vw;
+}
+.logo img {
+  width: 9rem;
+  float: left;
+  margin-left: 2rem;
+}
+.heading {
+  text-align: center;
+}
+.heading h1 {
+    font-family: "Fjalla One", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .3rem;
+    font-size: 5rem;
+}
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100vw;
+}
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+}
+.navbar ul li{
+  list-style: none;
+
+  & a{ 
+      display: inline-block;
+      font-weight: 600;
+      font-size: 1.7rem;
+      text-decoration: none;
+      position: relative;
+      color: rgb(118, 193, 118);
+  }
+  & ::after{
+      content: "";
+      position: absolute;
+      bottom: -0.2rem;
+      left: 0;
+      width: 0%;
+      border-bottom: .15rem solid #0062ff ;
+      transition: all .3s linear;
+  }
+  & a:hover:after{
+      width: 100%;
+  }
+}
+.main{
+   max-width: 100vw;
+}
+.section-1{
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.main-section{
+    display: flex;
+    flex-wrap:wrap ;
+    padding: .3rem .7rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+    animation: gallery 20s linear infinite ;
+    & a{
+        display: inline-block;
+        padding: 0.3rem 1.2rem;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.2rem;
+        letter-spacing: .1rem;
+        word-spacing: .2rem;
+    }
+    & :hover{
+        text-decoration: underline;
+    }
+    
+}
+@keyframes gallery{
+    0%{
+        background-color: #d59bf6;
+    }
+    20%{
+        background-color: #00bbf0;
+    }
+    40%{
+        background-color: #621055;
+    }
+    60%{
+        background-color:  #616f39;
+    }
+    80%{
+        background-color: #f35588;
+    }
+    100%{
+        background-color: #506f86;
+    }
+}
+section{
+    max-width: 100vw;
+    margin-top: 3rem;
+    display: grid;
+    place-items: center;
+}
+.container{
+    max-width: 90vw;
+    height: 100vh;
+    display: flex;
+    gap: 4rem;
+}
+.table-1,.table-2,.table-3{
+    width: 400px;
+    background-color: #497285;
+    border: 2px solid black;
+    & h1{
+        padding: .8rem 1.3rem;
+        text-align: center;
+        color: #fff;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: .2rem;
+        word-spacing: .2rem;
+    }
+}
+
+.content{
+    height: 90vh;
+    /* border: 2px solid black; */
+    overflow-y: scroll;
+}
+.content::-webkit-scrollbar{
+    width: 0;
+}
+.content ul li{
+    padding: .1rem 1rem;
+    line-height: 1.7;
+
+    & a {
+        letter-spacing: .1rem;
+        text-decoration: none;
+    }
+    & :hover{
+        text-decoration: underline;
+    }
+}
+
+.content ul li:nth-child(odd){
+    background-color: #c9fdd7;
+    color: #212121;
+}
+.content ul li:nth-child(even){
+    background-color: #ffb6b9;
+    color: #fff;
+}
+
+ /* ---------------------footer----------------------------  */
+
+footer {
+    max-width: 100vw;
+    margin-top: 2rem;
+   background-color:#0062ff;
+    padding: 30px; 
+    color: white; 
+    font-family: Arial, sans-serif;
+}
+.f-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center; 
+    max-width: 1200px; 
+    margin: auto;
+}
+
+.f-container  h3{
+   margin-bottom: 10px; 
+   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.f-container h3 ul{
+    list-style: none; 
+    padding: 0; 
+    margin: 0;
+}
+
+.f-container h3 ul li a{
+    color: white; 
+    text-decoration: none; 
+    display: inline-block; 
+    margin: 5px 0; 
+    position: relative;
+}
+
+.social h3 {
+    margin-bottom: 10px; 
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+.social a{
+    position: relative;
+    color: white;
+     text-decoration: none;
+      font-size: 24px; 
+      transition: transform 0.3s ease;
+      & ::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: #0062ff;
+        bottom: -3px;
+        left: 0;
+        transition: width 0.3s ease;
+    }
+
+    & :hover::after {
+        width: 100%;
+    }
+}
+.social i{
+    color: white; 
+    transition: color 0.3s, transform 0.3s;
+
+    & :hover{
+        transform: translateY(-5px) scale(1.2);
+          color: #0062ff;
+    }
+}
+.f-bottom{
+    text-align: center; margin-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.5); padding-top: 20px;
+}
+.f-bottom p{
+    margin: 0;
+}
+/*
+.f-container a:hover {
+    transform: translateX(.5rem);
+    transition: 0.5s ease;
+}
+
+.f-container i {
+    padding-right: .5rem;
+    color: var(--clr1);
+}
+
+.f-container input {
+    width: 100%;
+    padding: 1rem;
+    background: var(--clr5);
+    border: .2rem solid var(--clr1);
+    margin-bottom: 1rem;
+}
+
+.f-container .btn {
+    background: var(--clr1);
+    color: var(--clr3);
+    cursor: pointer;
+    margin-top: 2rem;
+    border-radius: .2rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+.f-container .social {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.social .fab{
+      
+     padding: 7px;
+     border-radius: 50%;
+      background-color: #fff;
+}
+
+.f-container .social i:hover {
+    transform: rotate(360deg);
+    transition: 1s ease;
+}
+*/
